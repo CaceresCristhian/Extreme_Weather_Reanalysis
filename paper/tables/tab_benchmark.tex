@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\centering
+\caption{Chronological Out-of-Sample Evaluation on NOAA GHCN-Daily Stations (Test Period: 2025--2026).}
+\label{tab:extreme_results}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lccccccccc}
+\toprule
+\textbf{Architecture} & \textbf{ROC-AUC} & \textbf{PR-AUC} & \textbf{F1 (\%)} & \textbf{Precision (\%)} & \textbf{Recall (\%)} & \textbf{Onset Recall (\%)} & \textbf{Brier Score} & \textbf{BSS (Raw)} & \textbf{BSS (Recal.)} \\
+\midrule
+Naive Persistence & 0.840 & 0.546 & \textbf{71.6} & 71.6 & 71.6 & 0.0 & 0.0656 & -0.22 & -0.22 \\
+Monthly Climatology & 0.897 & 0.698 & 64.1 & \textbf{84.8} & 51.5 & 12.2 & \textbf{0.0539} & \textbf{0.00} & 0.00 \\
+Logistic Regression ($t$) & 0.739 & 0.385 & 31.2 & 19.6 & 77.6 & \textbf{58.7} & 0.2213 & -3.10 & -0.64 \\
+1D Temporal ConvNet (CNN) & 0.929 & 0.770 & 63.7 & 52.1 & 82.0 & 41.9 & 0.0835 & -0.55 & 0.19 \\
+HistGradientBoosting (7d) & \textbf{0.936} & 0.821 & 68.7 & 60.9 & 78.7 & 29.7 & 0.0681 & -0.26 & 0.25 \\
+Temporal Transformer (This Study) & 0.935 & \textbf{0.828} & 66.7 & 55.7 & \textbf{83.0} & 43.0 & 0.0689 & -0.28 & \textbf{0.27} \\
+\bottomrule
+\end{tabular}}
+\end{table*}

@@ -1,0 +1,40 @@
+# ==============================================================================
+# Extreme Weather Reanalysis Fusion Git & Security Exclusions
+# ==============================================================================
+
+# Credentials, API Keys, Tokens, and MCP Configurations
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.p12
+*.pfx
+*.cert
+*token*
+*secret*
+*credential*
+Copernicus.txt
+.netrc
+.cdsapirc
+.ecmwfapirc
+mcp_config.json
+*mcp_config*
+
+# Python caches and bytecode
+__pycache__/
+*.py[cod]
+.pytest_cache/
+venv/
+.venv/
+
+# Heavy neural network checkpoints and raw caches
+checkpoints/
+*.pt
+*.pth
+
+# OS and Editor metadata
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

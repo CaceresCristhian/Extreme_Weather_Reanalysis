@@ -1,0 +1,20 @@
+\begin{table*}[t]
+\caption{Comparison of Meteorological Prediction Frameworks and Hazard Evaluation Schemes}
+\label{tab:literature_comparison}
+\centering
+\footnotesize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{p{3.4cm}p{2.6cm}p{2.8cm}p{2.8cm}p{2.8cm}p{3.4cm}}
+\toprule
+\textbf{Framework / Paradigm} & \textbf{Spatial Representation} & \textbf{Prediction Target} & \textbf{Baseline Protocols} & \textbf{Abrupt Transition Evaluation} & \textbf{Operational Focus} \\
+\midrule
+Numerical Weather Prediction~\cite{bauer2015quiet} & Global grid ($\approx 9$--$25\text{ km}$) & Continuous physical dynamics & Physics-based dynamical models & Continuous trajectory verification & Physics-resolved synoptic evolution \\
+Global AI Weather Models~\cite{bi2023,lam2023} & Gridded reanalysis ($0.25^\circ$) & Medium-range atmospheric fields & Climatology and IFS baselines & Field-averaged RMSE / ACC & Fast multi-day global rollouts \\
+WeatherBench Benchmark~\cite{rasp2020weatherbench} & Gridded spherical harmonics & Continuous temperature/pressure & Climatology and persistence & Evaluated on full test period & Standardized medium-range comparison \\
+Tabular Tree Models~\cite{grinsztajn2022why,shwartzziv2022tabular} & Station-level tabular lag vector & Discrete threshold exceedance & Baseline comparisons vary & Standard classification recall & Strong tabular feature interactions \\
+\midrule
+\textbf{Station Sequence Benchmark (This Study)} & \textbf{In-situ NOAA Station Time Series} & \textbf{Binary multi-hazard threshold} & \textbf{Climatology and persistence} & \textbf{Conditioned onset ($y_t=0 \to y_{t+1}=1$)} & \textbf{Persistence-isolated onset detection} \\
+\bottomrule
+\end{tabular}%
+}
+\end{table*}
